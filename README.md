@@ -1,3 +1,11 @@
+set Database:
+type: 'mysql',
+host: 'localhost',
+port: 3306,
+username: 'root',
+password: 'temp123',
+database: 'db_developer',
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>

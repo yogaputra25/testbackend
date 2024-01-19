@@ -27,14 +27,17 @@ export class CheklistitemController {
   async alldata() {
     return this.chekItemService.allData();
   }
+  @UseGuards(JwtGuard)
   @Get('/checklist/:id/item')
   async findOne(@Param('id') id: any) {
     return this.chekItemService.findOne(id);
   }
+  @UseGuards(JwtGuard)
   @Get('/checklist/:id/item/:item')
   async finditem(@Param('id') id: any, @Param('item') item: any) {
     return this.chekItemService.finditem(id, item);
   }
+  @UseGuards(JwtGuard)
   @Put('/checklist/:id/item/:item')
   async update(
     @Param('id') id: any,
@@ -43,6 +46,7 @@ export class CheklistitemController {
   ) {
     return this.chekItemService.update(id, item, data);
   }
+  @UseGuards(JwtGuard)
   @Delete('/checklist/:id/item/:item')
   async delete(
     @Param('id') id: any,
